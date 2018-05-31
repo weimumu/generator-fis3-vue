@@ -1,0 +1,22 @@
+{
+  "name": "generator-fis3-vue",
+  "version": "1.0.0",
+  "description": "基于fis3和vue的脚手架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weimumu/generator-fis3-vue.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "weimumu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weimumu/generator-fis3-vue/issues"
+  },
+  "homepage": "https://github.com/weimumu/generator-fis3-vue#readme"
+}
