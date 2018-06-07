@@ -62,3 +62,32 @@ fis.match('**.{js,jsx,ts,es6,vue}', {
         }) 
     ]
 });
+
+// vue文件里面的scss
+fis.match('**.vue:scss', {
+	rExt: 'css',
+	parser: [
+		fis.plugin('node-sass')
+	],
+    useSprite: true,
+    // 标准化处理，加css前缀
+    preprocessor: fis.plugin('autoprefixer', {
+        // https://www.npmjs.com/package/fis3-preprocessor-autoprefixer
+        "browsers": ["Android >= 2.4", "iOS >= 4", "ie >= 9", "firefox >= 15"]
+    })
+});
+
+// sass. scss文件处理
+fis.match('*.{scss,sass}', {
+    // sass编译
+    parser: fis.plugin('node-sass'), //启用fis-parser-sass插件
+    // 产出css后缀的名字
+    rExt: '.css',
+    // 使用雪碧图
+    useSprite: true,
+    // 标准化处理，加css前缀
+    preprocessor: fis.plugin('autoprefixer', {
+        // https://www.npmjs.com/package/fis3-preprocessor-autoprefixer
+        "browsers": ["Android >= 2.4", "iOS >= 4", "ie >= 9", "firefox >= 15"]
+    })
+});
